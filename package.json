@@ -1,0 +1,44 @@
+{
+  "name": "manic-yaml-matter",
+  "version": "1.0.0",
+  "description": "Yaml文件操作库",
+  "type": "module",
+  "scripts": {
+    "clean": "rimraf dist",
+    "test": "npm run clean && npm run build:cjs",
+    "build": "npm run clean && npm run build:cjs && npm run build:esm && npm run create:project",
+    "build:cjs": "rimraf dist/cjs && rollup -c config/rollup.config.cjs.js",
+    "build:esm": "rimraf dist/esm && rollup -c config/rollup.config.esm.js",
+    "create:project": "node scripts/create-package.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manic-r/manic-yaml-matter.git"
+  },
+  "keywords": [
+    "manic",
+    "yaml",
+    "yml"
+  ],
+  "author": "@manic-r",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manic-r/manic-yaml-matter/issues"
+  },
+  "homepage": "https://github.com/manic-r/manic-yaml-matter#readme",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^26.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/lodash": "^4.17.7",
+    "@types/node": "^22.3.0",
+    "rimraf": "^6.0.1",
+    "rollup": "^4.20.0",
+    "tslib": "^2.6.3",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "yaml": "^2.5.0"
+  }
+}
