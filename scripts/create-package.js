@@ -13,6 +13,7 @@ const reserve_keys = [
   'version',
   'description',
   'author',
+  'keywords',
   'license',
   'sideEffects',
   'main',

@@ -1,6 +1,6 @@
 {
   "name": "manic-yaml-matter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Yaml文件操作库",
   "type": "module",
   "scripts": {
